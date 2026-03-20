@@ -66,10 +66,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'quiz_api.wsgi.application'
 
-# ─── Database ──────────────────────────────────────────────────────────────────
-DATABASE_URL = os.environ.get('DATABASE_URL', 'postgres://quiz_user:quiz_password@localhost:5432/quiz_db')
-DATABASES = {'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)}
+# # ─── Database ──────────────────────────────────────────────────────────────────
+# DATABASE_URL = os.environ.get('DATABASE_URL', 'postgres://quiz_user:quiz_password@localhost:5432/quiz_db')
+# DATABASES = {'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)}
 
+# ─── Database ──────────────────────────────────────────────────────────────────
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=not DEBUG,
+    )
+}
 # ─── Cache (Redis in prod, locmem in dev) ──────────────────────────────────────
 REDIS_URL = os.environ.get('REDIS_URL', None)
 if REDIS_URL:

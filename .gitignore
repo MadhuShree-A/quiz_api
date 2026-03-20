@@ -1,1 +1,29 @@
+# Virtual environment
+venv/
 /venv
+
+# Environment variables - NEVER commit this
+.env
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.py[cod]
+
+# Django
+db.sqlite3
+staticfiles/
+media/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Migrations (optional - some keep these)
+# apps/*/migrations/0*.py

@@ -7,7 +7,6 @@ A production-ready REST API for a full-featured quiz platform with AI-generated 
 
 | | |
 |---|---|
-| **API Base URL** | https://web-production-2decb.up.railway.app/api/v1/ |
 | **Interactive Docs** | https://web-production-2decb.up.railway.app/docs/ |
 | **Admin Panel** | https://web-production-2decb.up.railway.app/admin/ |
 
@@ -18,9 +17,7 @@ A production-ready REST API for a full-featured quiz platform with AI-generated 
 
 | Feature | Link |
 |--------|------|
-| **API Base URL** | https://quiz-api-qkxw.onrender.com/api/v1/ |
 | **API Docs**  | https://quiz-api-qkxw.onrender.com/ |
-| **Admin Panel** | https://quiz-api-qkxw.onrender.com/admin/ |
 
 ---
 

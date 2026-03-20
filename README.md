@@ -3,6 +3,15 @@
 A production-ready REST API for a full-featured quiz platform with AI-generated questions, JWT authentication, analytics, and leaderboards.
 
 ---
+## Live Demo
+
+| | |
+|---|---|
+| **API Base URL** | https://web-production-2decb.up.railway.app/api/v1/ |
+| **Interactive Docs** | https://web-production-2decb.up.railway.app/docs/ |
+| **Admin Panel** | https://web-production-2decb.up.railway.app/admin/ |
+
+---
 
 ## Quick Start
 
@@ -134,7 +143,7 @@ difficulty_at_attempt
 | `POST /api/v1/quizzes/attempts/<id>/submit/` | Finalise + score the attempt |
 | `GET /api/v1/quizzes/attempts/<id>/results/` | Get scored results |
 
-### Analytics  🔒 requires auth
+### Analytics   requires auth
 | Endpoint | Description |
 |---|---|
 | `GET /api/v1/analytics/dashboard/` | Personal dashboard (cached 5 min) |
@@ -172,6 +181,7 @@ The API supports three free-tier AI providers. Set `AI_SERVICE` in `.env`:
 
 | Provider | Model | Free Tier | Env var |
 |---|---|---|---|
+| Groq ✅ (currently used) | `llama-3.3-70b-versatile` | Free | `GROQ_API_KEY` |
 | OpenAI | `gpt-4o-mini` | $5 credit | `OPENAI_API_KEY` |
 | Anthropic | `claude-haiku-4-5-20251001` | $5 credit | `ANTHROPIC_API_KEY` |
 | Google | `gemini-1.5-flash` | Generous free tier | `GEMINI_API_KEY` |

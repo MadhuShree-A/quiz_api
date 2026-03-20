@@ -1,2 +1,1 @@
-web: gunicorn quiz_api.wsgi --log-file -
-release: python manage.py migrate --noinput
+web: python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn quiz_api.wsgi --log-file -
